@@ -17,22 +17,28 @@ import java.time.LocalDateTime;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 public class Account {
+
     @Id
     @GeneratedValue
-    Long id;
+    private Long id;
 
     @ManyToOne
     private AccountUser accountUser;
+
     private String accountNumber;
+
     @Enumerated(EnumType.STRING)
     private AccountStatus accountStatus;
+
     private Long balance;
 
     private LocalDateTime registeredAt;
+
     private LocalDateTime unRegisteredAt;
 
     @CreatedDate
     private LocalDateTime createAt;
+
     @LastModifiedDate
     private LocalDateTime updateAt;
 

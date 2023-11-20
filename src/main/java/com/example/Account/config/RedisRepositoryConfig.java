@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RedisRepositoryConfig {
+
     @Value("${spring.redis.host}")
     private String redisHost;
 
